@@ -2,6 +2,10 @@
 
 <h2 align="center">OOP Design with Java</h2>
 
+<p align="left">
+	<a href="https://github.com/lilyhe123/java-oop-practice/actions/workflows/maven.yml"><img alt="Actions status" src="https://github.com/lilyhe123/java-oop-practice/actions/workflows/maven.yml/badge.svg"</a>
+</p>
+    
 A Java project with Maven and JUnit 5 to implement some OOP designs.
 
 ## Prerequisites
