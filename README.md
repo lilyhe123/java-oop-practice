@@ -1,5 +1,6 @@
 <a href="#"><img alt="" src="https://raw.githubusercontent.com/lilyhe123/java-oop-practice/main/art/quote1.png"></a>
-# OOP Design with Java
+
+<h2 align="center">OOP Design with Java</h2>
 
 A Java project with Maven and JUnit 5 to implement some OOP designs.
 
