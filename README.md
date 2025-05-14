@@ -6,7 +6,7 @@
 	<a href="https://github.com/lilyhe123/java-oop-practice/actions/workflows/maven.yml"><img alt="Actions status" src="https://github.com/lilyhe123/java-oop-practice/actions/workflows/maven.yml/badge.svg"</a>
 </p>
     
-Use OO design to solve problems with java.
+Solve problems with OO design in java.
 
 ## Prerequisites
 - JDK 17 or later
