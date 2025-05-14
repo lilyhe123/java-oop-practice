@@ -1,7 +1,12 @@
 <a href="#"><img alt="" src="https://raw.githubusercontent.com/lilyhe123/java-oop-practice/main/art/quote1.png"></a>
-# OOP Design with Java
 
-A Java project with Maven and JUnit 5 to implement some OOP designs.
+<h2 align="center">OO Design with Java</h2>
+
+<p align="left">
+	<a href="https://github.com/lilyhe123/java-oop-practice/actions/workflows/maven.yml"><img alt="Actions status" src="https://github.com/lilyhe123/java-oop-practice/actions/workflows/maven.yml/badge.svg"</a>
+</p>
+    
+Solve problems with OO design in java.
 
 ## Prerequisites
 - JDK 17 or later
