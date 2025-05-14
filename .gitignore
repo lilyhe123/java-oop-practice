@@ -15,4 +15,5 @@ target/
 # Mac
 .DS_Store
 
+notes.md
 sync.sh
