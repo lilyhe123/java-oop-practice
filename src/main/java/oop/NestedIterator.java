@@ -2,7 +2,7 @@ package oop;
 
 import java.util.*;
 /**
- * Flatten Nested List Iterator 
+ * 3. Flatten Nested List Iterator 
  * You are given a nested list of integers nestedList. Each element is either an 
  * integer or a list whose elements may also be integers or other lists. 
  * Implement an iterator to flatten it. 
@@ -30,19 +30,19 @@ import java.util.*;
  * If the NestedInteger is an integer, it's the leaf node of the tree.
  * Otherwise it's a subtree.
  * 
- * We need to traverse the tree, when next() is called we move a step forward, 
- * until all elements in the tree are visited. 
+ * We need to traverse the tree with depth-first approach, when next() is called we
+ *  move a step forward, until all elements in the tree are visited. 
  * 
  * approach 1:
- * we can do the traversal first and store all the integers to a list,
+ * we can do the full traversal first and store all the integers to a list,
  * then it's straight forward to use an index to track the current element and go to next.
  * but with this approach we need to create a new data structure to store all element first.
- * Not space efficiency.
+ * No space efficiency.
  * space O(n), n is the total number of integers in the given list.
  * 
  * approach 2: 
  * Can we do the tree traversal on-the-fly and move a step forward when next() is called.
- * How to reserver the traversal status so when next() calling, we know how to go next?
+ * How to reserve the traversal status? So we know how to continue when next() is called.
  * 
  * We can use a stack to store all the parent NestedInteger along the way.
  * The max size of the queue is the max depth of the tree.
@@ -51,10 +51,10 @@ import java.util.*;
  * Stack<Iterator<NestedInteger>> stack;
  * Integer nextValue;
  * initally only one element in the stack, the given input nested list.
- * For each next() call:
+ * For each next() call, find the next integer in the nested list.
  * 1. Move up until a non-empty iterator.
  * 2. move down until a leaf node or move up if encounter an empty iterator. 
- *    Store the value of the leaf node and return.    
+ *    Store and return the int value.    
  *     
  */
 
@@ -118,7 +118,7 @@ interface NestedInteger {
     public Integer getInteger();
     public List<NestedInteger> getList();
  }
- class NestedIntegerImpl implements NestedInteger {
+class NestedIntegerImpl implements NestedInteger {
     private boolean isInteger;
     private List<NestedInteger> list;
     private Integer integer;

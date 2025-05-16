@@ -3,6 +3,7 @@ package oop;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 /**
+ * 2. PeekingIterator
  * Design an iterator that supports the peek operation on an existing iterator 
  * in addition to the hasNext and the next operations. 
  *  
