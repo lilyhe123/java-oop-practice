@@ -2,7 +2,7 @@ package oop;
 
 import java.util.*;
 /**
- * Unique Word Abbreviation 
+ * 1. Unique Word Abbreviation 
  * The abbreviation of a word is a concatenation of its first letter, the number 
  * of characters between the first and last letter, and its last letter. If a 
  * word has only two characters, then it is an abbreviation of itself. 

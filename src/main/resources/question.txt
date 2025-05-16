@@ -1,17 +1,11 @@
-NestedIterator
-Flatten Nested List Interator
-You are given a nested list of integers nestedList. Each element is either an integer or a list whose elements may also be integers or other lists. Implement an iterator to flatten it.
+MedianFinder
+4. Find Median from Data Stream
+The median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value, and the median is the mean of the two middle values.
 
-Implement the NestedIterator class:
+For example, for arr = [2,3,4], the median is 3.
+For example, for arr = [2,3], the median is (2 + 3) / 2 = 2.5.
+Implement the MedianFinder class:
 
-NestedIterator(List<NestedInteger> nestedList) Initializes the iterator with the nested list nestedList.
-int next() Returns the next integer in the nested list.
-boolean hasNext() Returns true if there are still some integers in the nested list and false otherwise.
-Your code will be tested with the following pseudocode:
-
-initialize iterator with nestedList
-res = []
-while iterator.hasNext()
-    append iterator.next() to the end of res
-return res
-If res matches the expected flattened list, then your code will be judged as correct.
+MedianFinder() initializes the MedianFinder object.
+void addNum(int num) adds the integer num from the data stream to the data structure.
+double findMedian() returns the median of all elements so far. Answers within 10-5 of the actual answer will be accepted.
