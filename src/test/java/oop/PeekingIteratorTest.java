@@ -3,6 +3,7 @@ package oop;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.Collectors;
@@ -42,8 +43,8 @@ public class PeekingIteratorTest {
     PeekingIterator peekingIterator = new PeekingIterator(list.iterator());
     
     assertFalse(peekingIterator.hasNext(), "Iterator should be empty.");
-    assertThrows(IllegalStateException.class, peekingIterator::peek, "Peek should throw exception for empty iterator.");
-    assertThrows(IllegalStateException.class, peekingIterator::next, "Next should throw exception for empty iterator.");
+    assertThrows(NoSuchElementException.class, peekingIterator::peek, "Peek should throw exception for empty iterator.");
+    assertThrows(NoSuchElementException.class, peekingIterator::next, "Next should throw exception for empty iterator.");
   }
 
   @Test
@@ -55,7 +56,7 @@ public class PeekingIteratorTest {
     assertEquals(42, peekingIterator.peek(), "Peek should return the single element.");
     assertEquals(42, peekingIterator.next(), "Next should return the single element.");
     assertFalse(peekingIterator.hasNext(), "Iterator should not have more elements.");
-    assertThrows(IllegalStateException.class, peekingIterator::peek, "Peek should throw exception after last element.");
-    assertThrows(IllegalStateException.class, peekingIterator::next, "Next should throw exception after last element.");
+    assertThrows(NoSuchElementException.class, peekingIterator::peek, "Peek should throw exception after last element.");
+    assertThrows(NoSuchElementException.class, peekingIterator::next, "Next should throw exception after last element.");
   }
 }
