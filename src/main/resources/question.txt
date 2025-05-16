@@ -1,16 +1,17 @@
+NestedIterator
+Flatten Nested List Interator
+You are given a nested list of integers nestedList. Each element is either an integer or a list whose elements may also be integers or other lists. Implement an iterator to flatten it.
 
-ValidWordAbbr
-Unique Word Abbreviation
-The abbreviation of a word is a concatenation of its first letter, the number of characters between the first and last letter, and its last letter. If a word has only two characters, then it is an abbreviation of itself.
+Implement the NestedIterator class:
 
-For example:
+NestedIterator(List<NestedInteger> nestedList) Initializes the iterator with the nested list nestedList.
+int next() Returns the next integer in the nested list.
+boolean hasNext() Returns true if there are still some integers in the nested list and false otherwise.
+Your code will be tested with the following pseudocode:
 
-dog --> d1g because there is one letter between the first letter 'd' and the last letter 'g'.
-internationalization --> i18n because there are 18 letters between the first letter 'i' and the last letter 'n'.
-it --> it because any word with only two characters is an abbreviation of itself.
-Implement the ValidWordAbbr class:
-
-ValidWordAbbr(String[] dictionary) Initializes the object with a dictionary of words.
-boolean isUnique(string word) Returns true if either of the following conditions are met (otherwise returns false):
-There is no word in dictionary whose abbreviation is equal to word's abbreviation.
-For any word in dictionary whose abbreviation is equal to word's abbreviation, that word and word are the same.
+initialize iterator with nestedList
+res = []
+while iterator.hasNext()
+    append iterator.next() to the end of res
+return res
+If res matches the expected flattened list, then your code will be judged as correct.

@@ -1,6 +1,7 @@
 package oop;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 /**
  * Design an iterator that supports the peek operation on an existing iterator 
  * in addition to the hasNext and the next operations. 
@@ -36,7 +37,7 @@ class PeekingIterator implements Iterator<Integer> {
     if (hasNext) {
       return top;
     } else {
-      throw new IllegalStateException("The iterator is empty.");
+      throw new NoSuchElementException("The iterator is empty.");
     }
   }
   @Override
@@ -55,7 +56,7 @@ class PeekingIterator implements Iterator<Integer> {
       }
       return nextVal;
     } else {
-      throw new IllegalStateException("The iterator is empty.");
+      throw new NoSuchElementException("The iterator is empty.");
     }
   }
 }

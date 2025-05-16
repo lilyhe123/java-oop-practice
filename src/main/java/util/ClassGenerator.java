@@ -77,7 +77,7 @@ public class ClassGenerator {
       writer.write(" */\n\n");
 
       writer.write("public class " + className + " {\n");
-      writer.write("    // TODO: Add fields, methods, and logic here\n");
+      //writer.write("    // TODO: Add fields, methods, and logic here\n");
       writer.write("    public " + className + "() {\n");
       writer.write("        // Default constructor\n");
       writer.write("    }\n");
