@@ -32,9 +32,10 @@ import java.util.*;
  * -----------------------------
  * 
  * For every move, we need to calculate the next position, 
- * whether the game is over when the next position is out of range, 
- * or the snake runs into itself. 
- * If not game over, can the snake eat a food and increase its length.
+ * whether the game is over?
+ *   the next position is out of range, 
+ *   or the snake runs into itself. 
+ * If game is not over, can the snake eat a food resulting in increasing its length.
  * 
  * To check whether the snake runs into itself, we need to store the history
  * positions of the same size of the snake's size. To make the check with constant
