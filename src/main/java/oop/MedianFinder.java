@@ -24,15 +24,19 @@ import java.util.*;
  * Approach 1:
  * Maintain a sorted list of elements so far. 
  * To maintain a sorted list with dynamic updates effeciently,
- * we need a data structure like balanced binary search (red-black tree) and
- * adding a new data takes O(lgN) times. But to find the median in the tree is not
+ * we need a data structure like balanced binary search (aka red-black tree) and
+ * adding a new data takes time O(lgN). But to find the median in the tree is not
  * straight-forward and need to travel first half of the tree (time O(n));
  * 
  * Approach 2:
  * We don't need the entire list to be sorted to find the median. We only need to
- * split to half-half, so using a two heaps is a more efficient approach.
- * Maintain two balanced heaps, always having almost the same capacity. First heap is
- * a max-heap and the second one is a min-heap.
+ * split the list to half-half. And the median only depends on max value in the left
+ * half and min value in the right half.
+ * 
+ * Using a two heaps is a more efficient approach.
+ * 
+ * Maintain two heaps, always having almost the same capacity. 
+ * The left heap is a max-heap and the right one is a min-heap.
  * - To insert a new elment to a heap takes O(lgN).
  * - The median can be calculated with the top elements of the two heaps (time O(1)).
  * maxHeap, minHeap

@@ -1,11 +1,18 @@
-MedianFinder
-4. Find Median from Data Stream
-The median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value, and the median is the mean of the two middle values.
+SnakeGame
+5. Design Snake Game
+Design a Snake game that is played on a device with screen size height x width. Play the game online if you are not familiar with the game.
 
-For example, for arr = [2,3,4], the median is 3.
-For example, for arr = [2,3], the median is (2 + 3) / 2 = 2.5.
-Implement the MedianFinder class:
+The snake is initially positioned at the top left corner (0, 0) with a length of 1 unit.
 
-MedianFinder() initializes the MedianFinder object.
-void addNum(int num) adds the integer num from the data stream to the data structure.
-double findMedian() returns the median of all elements so far. Answers within 10-5 of the actual answer will be accepted.
+You are given an array food where food[i] = (ri, ci) is the row and column position of a piece of food that the snake can eat. When a snake eats a piece of food, its length and the game's score both increase by 1.
+
+Each piece of food appears one by one on the screen, meaning the second piece of food will not appear until the snake eats the first piece of food.
+
+When a piece of food appears on the screen, it is guaranteed that it will not appear on a block occupied by the snake.
+
+The game is over if the snake goes out of bounds (hits a wall) or if its head occupies a space that its body occupies after moving (i.e. a snake of length 4 cannot run into itself).
+
+Implement the SnakeGame class:
+
+SnakeGame(int width, int height, int[][] food) Initializes the object with a screen of size height x width and the positions of the food.
+int move(String direction) Returns the score of the game after applying one direction move by the snake. If the game is over, return -1.
