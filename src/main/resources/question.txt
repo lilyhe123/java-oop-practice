@@ -1,18 +1,39 @@
-SnakeGame
-5. Design Snake Game
-Design a Snake game that is played on a device with screen size height x width. Play the game online if you are not familiar with the game.
+Twitter
+6. Design Twitter
+Design a simplified version of Twitter where users can post tweets, follow/unfollow another user, and is able to see the 10 most recent tweets in the user's news feed.
 
-The snake is initially positioned at the top left corner (0, 0) with a length of 1 unit.
+Implement the Twitter class:
 
-You are given an array food where food[i] = (ri, ci) is the row and column position of a piece of food that the snake can eat. When a snake eats a piece of food, its length and the game's score both increase by 1.
+Twitter() Initializes your twitter object.
+void postTweet(int userId, int tweetId) Composes a new tweet with ID tweetId by the user userId. Each call to this function will be made with a unique tweetId.
+List<Integer> getNewsFeed(int userId) Retrieves the 10 most recent tweet IDs in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user themself. Tweets must be ordered from most recent to least recent.
+void follow(int followerId, int followeeId) The user with ID followerId started following the user with ID followeeId.
+void unfollow(int followerId, int followeeId) The user with ID followerId started unfollowing the user with ID followeeId.
+ 
 
-Each piece of food appears one by one on the screen, meaning the second piece of food will not appear until the snake eats the first piece of food.
+Example 1:
 
-When a piece of food appears on the screen, it is guaranteed that it will not appear on a block occupied by the snake.
+Input
+["Twitter", "postTweet", "getNewsFeed", "follow", "postTweet", "getNewsFeed", "unfollow", "getNewsFeed"]
+[[], [1, 5], [1], [1, 2], [2, 6], [1], [1, 2], [1]]
+Output
+[null, null, [5], null, null, [6, 5], null, [5]]
 
-The game is over if the snake goes out of bounds (hits a wall) or if its head occupies a space that its body occupies after moving (i.e. a snake of length 4 cannot run into itself).
+Explanation
+Twitter twitter = new Twitter();
+twitter.postTweet(1, 5); // User 1 posts a new tweet (id = 5).
+twitter.getNewsFeed(1);  // User 1's news feed should return a list with 1 tweet id -> [5]. return [5]
+twitter.follow(1, 2);    // User 1 follows user 2.
+twitter.postTweet(2, 6); // User 2 posts a new tweet (id = 6).
+twitter.getNewsFeed(1);  // User 1's news feed should return a list with 2 tweet ids -> [6, 5]. Tweet id 6 should precede tweet id 5 because it is posted after tweet id 5.
+twitter.unfollow(1, 2);  // User 1 unfollows user 2.
+twitter.getNewsFeed(1);  // User 1's news feed should return a list with 1 tweet id -> [5], since user 1 is no longer following user 2.
+ 
 
-Implement the SnakeGame class:
+Constraints:
 
-SnakeGame(int width, int height, int[][] food) Initializes the object with a screen of size height x width and the positions of the food.
-int move(String direction) Returns the score of the game after applying one direction move by the snake. If the game is over, return -1.
+1 <= userId, followerId, followeeId <= 500
+0 <= tweetId <= 104
+All the tweets have unique IDs.
+At most 3 * 104 calls will be made to postTweet, getNewsFeed, follow, and unfollow.
+A user cannot follow himself.
